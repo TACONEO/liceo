@@ -1,0 +1,252 @@
+ *{
+    margin: 0; padding: 0; box-sizing: border-box;
+    
+   
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #E9ECEF;
+}
+nav{
+    background:#084298; opacity: .8; 
+}
+.ancla_logo{
+
+    display: flex; align-items: center; flex-direction: row; 
+}
+
+.redes_nav{
+
+    height: 20px; width: 20px;
+}
+.logo{
+
+    height: 60px; width: 60px;
+    
+   
+}
+ /* ANIMACION PARA GIRAR
+ 
+ a .logo{ animation: girar 5s infinite ;}
+
+ @keyframes girar{
+     from{
+        transform: rotateY(0deg);
+     }
+     to{
+        transform: rotateY(360deg);
+     }
+ } *************  */
+
+
+
+.nombre_logo {
+
+    font-size: 25px; color: whitesmoke;
+}
+
+.fondo_link:hover{
+
+    background: #0D6EFD;
+    font-size: 19px; transition: 0.5s;
+}
+.redes_nav:hover{
+
+    width: 25px; height: 25px; transition: 0.5s;
+}
+.enlaces_nav{
+    font-size: 16px; color: tomato;
+}
+
+.dropdown-item:hover{
+    background:#084298; font-weight: bold;
+
+}
+
+.vh_section{ height: 80vh;}
+.vh_footer{ height: 8vh;}
+
+.section_izquierda{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+      
+
+}
+
+.section_derecha{
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+
+.section_izquierda img{
+
+    flex: 1 1 35%;
+}
+
+.form_principal{
+    border-radius: 10px;
+    box-shadow: 5px 5px 6px 3px rgba(0, 0, 0, 0.2);
+}
+    .form_principal input{
+        font-weight: 900; font-size: 18px; font-family: 'Montserrat', sans-serif;
+        height: 60px;
+
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn_principal{
+        font-size: 20px; font-weight: 900;
+    }
+    .olvido:hover{
+        text-decoration:  underline;
+    }
+
+
+
+
+
+  /* ********* CSS PARA EL FORMULARIO DE REGISTRO DEL PERSONAL ********  */
+
+
+
+  .formulario{
+      display: flex;
+  }
+
+  .datos_personales, .datos_ubicacion, .datos_laborales{
+
+    min-width: 100%;
+     margin-right: 2px;
+     opacity: 0; 
+     
+}
+
+
+.activo{
+    opacity: 1; 
+
+    animation: ocultar 2.5s 1;
+}
+
+@keyframes ocultar{
+
+    from{
+        opacity: 0;
+    }
+    to{
+
+        opacity: 1;
+    }
+}
+
+.izquierda{
+    margin-left: -100%;
+}
+
+
+
+
+  
+  
+   /* ********* FIN DEL CSS PARA EL FORMULARIO DE REGISTRO DEL PERSONAL ********  */ 
+
+
+/* *********************  FONDO PARA ADMINISTRAR.PHP **************** */
+
+.admin {
+
+    background-image: url(../img/FRONTALLICEO.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    
+    
+ }
+
+
+
+@media (max-width:400px){
+
+    .logo{ height: 45px; width: 45px;}
+    .nombre_logo{font-size: 20px;}
+    .btn_principal{
+        font-size: 16px; font-weight: 700;
+    }
+    .olvido{
+        font-size: 14px;
+    }
+
+    .form_principal input{ height: 40px; font-weight: 700;}
+
+
+
+
+}
+@media (max-width:353px){
+
+    .ancla_logo{
+
+        flex-direction: column; align-content: center;
+    }
+
+    .logo{ height: 55px; width: 55px;}
+
+    .nombre_logo{font-size: 17px;}
+
+   /* .section_izquierda{ flex-direction: column;}
+    .section_izquierda img{flex: 1 1 auto;}*/
+
+    .section_izquierda{ display: none;}
+
+    .form_principal input{
+        font-size: 14px; font-family: 'Montserrat', sans-serif;
+        height: 40px;
+    }
+
+    .btn_principal{
+        font-size: 14px; 
+    }
+    
+    .footer{font-size: 12px;}
+    .opciones, .olvido{font-size: 11px;}
+
+    
+       
+ }
+
+@media(max-width: 906px){
+
+    .iconos_nav{ display: none;}
+}
+
+@media(max-width:767px){
+
+            .section_izquierda{ order: 2; flex-wrap: nowrap;}        
+         .section_izquierda img{ flex: 1 1 20%;}
+
+         .section_derecha{ order: 1;}
+
+
+
+
+
+}
+
+@media(max-width:535px){ 
+    
+    .section_izquierda{ flex-wrap: wrap;} 
+    .section_izquierda img{flex: 1 1 35%;}
+
+}
+
+
+
+

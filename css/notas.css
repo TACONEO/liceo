@@ -1,0 +1,114 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+nav{ justify-content:center;}
+nav div img{
+
+    width: 80px;
+    height: 80px;
+}
+
+.cabeza, .cedula, .btn_grados, .lapsos, .periodo, .cabeceras, .gal, select, .btn_cargar{
+
+    font-size: 18px;
+}
+.filas{font-size: 16px;}
+
+
+
+@media screen and (max-width:1100px){
+
+    nav{flex-wrap: wrap; justify-content:space-around;}
+
+    .seccion_3{
+
+        display: flex; justify-content: center;
+    }
+
+    .cabeceras, .filas{font-size: 13px;}
+    .cabeza{font-size: 18px;}
+ 
+     nav div img{
+         width: 70px;
+         height: 70px;
+     }
+     .cedula{display: none;}
+     .volver{margin-top: 5px; margin-bottom: 5px;}
+ 
+     .btn_grados, .btn_cargar{font-size: 20px;}
+ 
+     .gal{ font-size: 18px; margin-bottom: 4px; flex-grow: 2;}
+     .lapsos, select{ font-size: 18px; margin-bottom: 4px; flex-grow: 1;}
+     .periodo{ font-size: 16px;}
+ 
+ }
+
+
+@media screen and (max-width:600px){
+
+    nav{flex-wrap: wrap; justify-content:space-around;}
+
+    .cabeceras, .filas{font-size: 13px;}
+    .cabeza{font-size: 18px;}
+ 
+     nav div img{
+         width: 70px;
+         height: 70px;
+     }
+     .cedula{display: none;}
+     .volver{margin-top: 5px; margin-bottom: 5px;}
+ 
+     .btn_grados, .btn_cargar{font-size: 18px;}
+ 
+     .gal, .lapsos, select{ font-size: 14px; margin-bottom: 4px;}
+     .periodo{ font-size: 16px;}
+ 
+ }
+
+
+
+@media screen and (max-width:400px){
+
+    nav{flex-wrap: wrap; justify-content: center;}
+
+    .cabeceras, .filas{font-size: 11px;}
+    .cabeza{font-size: 16px;}
+ 
+     nav div img{
+         width: 55px;
+         height: 55px;
+     }
+     .cedula{display: none;}
+     .volver{margin-top: 5px; margin-bottom: 5px;}
+ 
+     .btn_grados, .btn_cargar{font-size: 14px;}
+ 
+     .gal, .lapsos, select{ font-size: 14px; margin-bottom: 4px;}
+     .periodo{ font-size: 14px;}
+ 
+ }
+
+ @media screen and (max-width:300px){
+
+    nav{flex-wrap: wrap; justify-content: center;}
+     .cabeza, .cabeceras, .filas{font-size: 11px;}
+ 
+     nav div img{
+         width: 40px;
+         height: 40px;
+     }
+     .cedula{display: none;}
+     .volver{margin-top: 5px; margin-bottom: 5px;}
+ 
+     .btn_grados, .btn_cargar{font-size: 12px;}
+ 
+     .gal, .lapsos, select{ font-size: 14px; margin-bottom: 4px;}
+     .periodo{ font-size: 14px;}
+ 
+ }
+
+
+
+
+
