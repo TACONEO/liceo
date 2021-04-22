@@ -198,7 +198,7 @@ else{
             })
 
            
-            /************* VUE EN ISCRIPCION **********/
+            /************* VUE EN InSCRIPCION **********/
 
 
 

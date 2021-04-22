@@ -199,10 +199,10 @@ width: 60px; height: 60px;  left:45%;
             <a href="" class="btn btn-success p-3 fs-5 fw-bold">Cargar Notas Pendientes</a>
         </div>
         <div class="col-md-4  p-3 text-center">
-           <a href="" class="btn btn-warning  p-3 fs-5 fw-bold">Generar Boletín</a>
+           <a href="boletin_datos.php" class="btn btn-warning  p-3 fs-5 fw-bold">Generar Boletín</a>
         </div>
         <div class="col-md-4  p-3 text-center">
-              <a href="" class="btn btn-primary p-3 fs-5 fw-bold ">Consultas Avanzadas</a>
+              <a href="" class="btn btn-primary p-3 fs-5 fw-bold ">Consultas</a>
         </div>
           
       </div>
