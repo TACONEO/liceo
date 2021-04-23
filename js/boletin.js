@@ -86,7 +86,7 @@ formulario.addEventListener("submit", function(e){
     .then(respuesta => respuesta.json())
     .then(data=>{
 
-            console.log(data);
+            alert(data);
             formulario.reset();
     })
 })
