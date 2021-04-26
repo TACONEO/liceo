@@ -5,16 +5,14 @@
     session_start();
     include_once 'conectar.php';
     
-
+    if(isset($_SESSION["admin"]) || isset($_SESSION["DOCENTE-DE"]) || isset($_SESSION["DOCENTE"]) || isset($_SESSION["DOCENTE-D"])){
+        
     $grado = $_POST["grado"];
     $seccion = $_POST["seccion"];
     $periodo = $_POST["periodo"];
 
-   // echo json_encode("EXITO");
-  //  $pagina = new fpdf();
-
-  //  $pagina->addPage('portrait','letter');
-   //$pagina->addfont('time',"BI","../fpdf/font/times.php");
+ 
+  
 
    $seleccion = 'SELECT cie FROM inscripcion WHERE grado=? AND seccion=? AND periodo=?';
    $sentencia = $conexion->prepare($seleccion);
@@ -166,7 +164,7 @@ if($resultado)
                             $pagina->SetLineWidth(0);
                             $pagina->SetDrawColor(0,0,0);
                             $pagina->line(12,220,50,220);
-                            $pagina->text(18,225,"Firma Docente");
+                            $pagina->text(18,225,utf8_decode("Docente Guía"));
                             
                             // ***************************************
                             
@@ -179,8 +177,8 @@ if($resultado)
                             
                             // ****** FIRMA DIRECTOR *******//
                             
-                            $pagina->line(158,220,196,220);
-                            $pagina->text(161,225,"Firma Direector(a)");
+                            $pagina->line(150,220,192,220);
+                            $pagina->text(161,225,"Director(a)");
                             
                             
                             if($filanotas["lapso1"]!="" && $filanotas["lapso2"]==="" && $filanotas["lapso3"] ==="")
@@ -207,7 +205,8 @@ if($resultado)
                             }
 
                             $generar = 1;
-                            $pagina->OutPut('F',$ruta.'/'.$fila['cie'].'.pdf');
+                             $pagina->OutPut('F',$ruta.'/'.$fila['cie'].'.pdf');
+                            
                         }
                            
                                 
@@ -232,7 +231,11 @@ if($resultado)
     
     
     
-  
+}
+else{
+
+    header( "refresh:0.5; url=../index.php" );
+} 
  
 
 

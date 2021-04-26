@@ -82,11 +82,34 @@ formulario.addEventListener("submit", function(e){
     e.preventDefault();
     var datos = new FormData(formulario);
 
-    fetch("boletin.php", {method:"POST", body:datos})
-    .then(respuesta => respuesta.json())
-    .then(data=>{
+    if(datos.get("grado") != "0" && datos.get("seccion") != "0" && datos.get("periodo") != "0")
+    {
+        fetch("boletin.php", {method:"POST", body:datos})
+        .then(respuesta => respuesta.json())
+        .then(data=>{
+    
+                alert(data);
+                formulario.reset();
+        })
 
-            alert(data);
-            formulario.reset();
-    })
+    }
+    else{
+
+            if(datos.get("grado")== "0"){
+
+                alert("Atención: Debe Seleccionar un Grado");
+            }
+
+            if(datos.get("seccion")== "0"){
+
+                alert("Atención: Debe Seleccionar una Sección");
+            }
+
+            if(datos.get("periodo")== "0"){
+
+                alert("Atención: Debe Seleccionar un Periodo");
+            }
+    }
+
+   
 })

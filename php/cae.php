@@ -382,14 +382,14 @@ if(isset($_SESSION["admin"]) or isset($_SESSION["DOCENTE-DE"]) or isset($_SESSIO
                             var datos = new FormData(formulario)
                             console.log(datos.get("cedula"))
 
-                            alert("entre")
+                           
 
                             fetch("ejecutar_eliminar.php",{method:"post", body:datos})
                             .then(resp => resp.json())
                             .then(data => {
                                   
                                   alert(data)
-                                  location.reload();
+                                  location.href ="administrar.php";
                             })
                
                         }) 

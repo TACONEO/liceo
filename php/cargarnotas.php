@@ -2,6 +2,8 @@
     session_start();
     include_once 'conectar.php';
 
+    if(isset($_SESSION["admin"]) || isset($_SESSION["DOCENTE-DE"]) || isset($_SESSION["DOCENTE"]) || isset($_SESSION["DOCENTE-D"])){
+
     $lapso = $_POST["lapso"];
     $cedula = $_POST["cedula"];
     $codigo = $_POST["codigo"];
@@ -159,11 +161,14 @@
 
           return $def;
 
-}
+    }
 
 
+ }
+ else{
 
-
+    header( "refresh:0.1; url=../index.php" );
+  }
 
    
     

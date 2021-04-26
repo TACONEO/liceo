@@ -159,51 +159,68 @@ width: 60px; height: 60px;  left:45%;
 
       <div class="row ">
 
-          <div class="col-md-4  text-center p-3">
+          <div class="col-md-3  text-center p-3">
 
               <a href="registro_per.php" class="btn btn-outline-danger p-3 fs-5 fw-bold">Registro de Personal</a>
           </div>
-          <div class="col-md-4  p-3 text-center">
+          <div class="col-md-3  p-3 text-center">
           <a href="registro_est.php" class="btn btn-outline-success   p-3 fs-5 fw-bold">Registro de Estudiantes</a>
           </div>
-          <div class="col-md-4  p-3 text-center">
-          <a href="cae.php" class="btn btn-outline-warning p-3 fs-5 fw-bold ">Acciones C A E</a>
+         
+          <div class="col-md-3  p-3 text-center">
+          <a href="cae.php" class="btn btn-outline-primary p-3 fs-5 fw-bold ">Acciones C A E</a>
           </div>
+
+          <div class="col-md-3  p-3 text-center">
+              <a href="materias.php" class="btn btn-outline-danger p-3 fs-5 fw-bold ">Cargar Asignaturas</a>
+        </div>
+         
       </div>
 
      
 
-      <div class="row my-3 ">
+      <div class="row my-2 ">
 
-          <div class="col-md-4  text-center p-3">
+          <div class="col-md-3  text-center p-3">
 
               <a href="doc_mat_secc.php
               " class="btn btn-outline-primary p-3 fs-5 fw-bold">Asignar Sección</a>
           </div>
 
-          <div class="col-md-4  p-3 text-center">
+          <div class="col-md-3  p-3 text-center">
           <a href="inscripcion.php" class="btn btn-outline-dark  p-3 fs-5 fw-bold">Inscripción</a>
           </div>
 
         
-             <div class="col-md-4  p-3 text-center">
-             <a href="notas.php" class="btn btn-outline-info p-3 fs-5 fw-bold ">Cargar Notas</a>
+             <div class="col-md-3  p-3 text-center">
+             <a href="notas.php" class="btn btn-outline-danger p-3 fs-5 fw-bold ">Cargar Notas</a>
               </div>
+
+
+            <div class="col-md-3  p-3 text-center">
+                <a href="boletin_datos.php" class="btn btn-outline-success p-3 fs-5 fw-bold">Generar Boletín</a>
+           </div>
        
 
       </div>
 
-      <div class="row my-3 ">
-         <div class="col-md-4  text-center p-3">
+      <div class="row my-2 ">
+         <div class="col-md-3  text-center p-3">
 
-            <a href="" class="btn btn-success p-3 fs-5 fw-bold">Cargar Notas Pendientes</a>
+            <a href="consultaMateria.php" class="btn btn-outline-dark p-3 fs-5 fw-bold">Consultar Asignatura</a>
         </div>
-        <div class="col-md-4  p-3 text-center">
-           <a href="boletin_datos.php" class="btn btn-warning  p-3 fs-5 fw-bold">Generar Boletín</a>
+
+        <div class="col-md-3  text-center p-3">
+
+            <a href="actualizaMateria.php" class="btn btn-outline-success p-3 fs-5 fw-bold">Actualizar Asignatura</a>
         </div>
-        <div class="col-md-4  p-3 text-center">
-              <a href="" class="btn btn-primary p-3 fs-5 fw-bold ">Consultas</a>
+
+        <div class="col-md-3  text-center p-3">
+
+            <a href="eliminarMateria.php" class="btn btn-outline-primary p-3 fs-5 fw-bold">Eliminar Asignatura</a>
         </div>
+        
+       
           
       </div>
     <?php endif ?>

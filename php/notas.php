@@ -12,7 +12,7 @@ if (window.history.replaceState) { // verificamos disponibilidad
     session_start();
     include_once 'conectar.php';
 
-   
+    if(isset($_SESSION["admin"]) || isset($_SESSION["DOCENTE-DE"]) || isset($_SESSION["DOCENTE"]) || isset($_SESSION["DOCENTE-D"])){
 
       if(isset($_SESSION["admin"])){$sesion = $_SESSION["admin"];}
       if(isset($_SESSION["DOCENTE"])){$sesion = $_SESSION["DOCENTE"];}
@@ -38,7 +38,11 @@ if (window.history.replaceState) { // verificamos disponibilidad
 
       $contador=0; $fila=0;
     
-   
+    }
+    else{
+
+      header( "refresh:0.1; url=../index.php" );
+    }
 
     
 

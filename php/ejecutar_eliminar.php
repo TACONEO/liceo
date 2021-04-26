@@ -29,7 +29,7 @@ include_once 'conectar.php';
     }
     else{
 
-        echo json_encode("NO REGISTRADO");
+        echo json_encode("NO REGISTRAD@");
     }
 
    
