@@ -15,8 +15,8 @@ else
         include_once 'conectar.php';
 
         $codigo = $_POST["codigo"];
-        $nombre = $_POST["nombre"];
-        $area =  $_POST["area"];
+        $nombre = strtoupper($_POST["nombre"]);
+        $area =  strtoupper($_POST["area"]);
         $grado =  $_POST["grado"];
 
         include_once 'funciones.php';

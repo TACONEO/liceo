@@ -74,7 +74,7 @@ else{
         <a href="administrar.php" class="text-white fs-5 fw-bold " data-bs-dismiss="" aria-label="" style="text-decoration:none;">X</a>
       </div>
       <div class="modal-body">
-            <form  method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+            <form  method="POST" id="materias" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
 
                     <input type="text" class="form-control text-center  fs-5 fw-bold " placeholder="Ingrese el Código" name="codigo" maxlength="2" required value='<?php if($control != 0){ echo "Código: ".$codigo;} ?>' <?php if($control != 0){ echo 'readonly';} ?>>
 
@@ -120,8 +120,24 @@ $( document ).ready(function()
 
             });
 
+var formulario = document.getElementById("materias");
+
+formulario.codigo.addEventListener("keypress",function(e){
+
+
+    if (!soloNumeros(event)){
+        e.preventDefault();
+
+    }
+})
+function soloNumeros(e){
+    var key = e.charCode;
+   
+    return key >= 48 && key <= 57;
+}
+
 </script>
 
-<?php $conexion = null; $respuesta_F = null; ?>
+<?php $conexion = null; $sentencia_F = null; ?>
 </body>
 </html>
