@@ -197,7 +197,7 @@ if($resultado)
                             }
                             
                            
-                            $ruta = 'c:/'.$periodo.'/'.$grado.$seccion.'/'.$lapso;
+                            $ruta = '../Boletines/'.$periodo.'/'.$grado.$seccion.'/'.$lapso;
 
                             if(!is_dir($ruta))
                             {
@@ -213,9 +213,16 @@ if($resultado)
      }
 
     $sentencia = null; $sentenciar2 = null; $sentenciar3 = null; $sentenciar4 = null; $conexion = null;
-
+     
+   
     if($generar > 0){
-        echo json_encode('Boletines de '.$grado.$seccion.' Se Generaron Satisfactoriamente!!!');
+
+       
+            
+     echo json_encode($lapso);
+    
+
+    
 
     }
     else{  
@@ -237,14 +244,5 @@ else{
     header( "refresh:0.5; url=../index.php" );
 } 
  
-
-
-
-
-
-
-
-
-
 
 ?>

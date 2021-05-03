@@ -10,7 +10,7 @@
 <body>
     
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1">
+<div class="modal fade crear" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header text-center w-100 " style="background:#483D8B;">
@@ -18,7 +18,7 @@
         <a href="administrar.php" class="text-white fs-5 fw-bold " data-bs-dismiss="" aria-label="" style="text-decoration:none;">X</a>
       </div>
       <div class="modal-body">
-            <form action="" method="" id="boletin">
+            <form action="" method="" id="boletin" class="">
             
             <select class="form-select form-control text-center" aria-label="Default select example" name="grado" id="">
                         <option value="0">Seleccione el Grado</option>
@@ -49,7 +49,23 @@
                           
             </select>
            
-            <button type="submit" class=" form-control btn btn-success mt-2 fs-5 fw-bold" name="Boletin">Generar Boletines</button>
+          
+            <button type="submit" class=" form-control btn btn-success mt-1 fs-5 fw-bold" name="Boletin">Generar Boletines</button>
+            
+            </form>
+
+          <!-- ********* DESCARGAR BOLETIN ***************************-->
+
+
+            <form action="descargar.php" method="POST" id="boletin2" class="d-none">
+            
+            <input type="text" name="periodo2" required readonly class="form-control my-2 text-center">
+            <input type="text" name="grado_seccion" required readonly class="form-control text-center">
+            <input type="text" name="lapso" required readonly class="form-control my-2 text-center">
+                    
+            <button type="submit" class=" form-control btn btn-success my-1 fs-5 fw-bold" name="descargar">Descargar Boletines</button>
+
+            <a href="boletin_datos.php" class="btn btn-danger w-100 fs-5 fw-bold">Regresar</a>
             
             </form>
            
@@ -58,6 +74,7 @@
     </div>
   </div>
 </div>
+
 
 <script src="../js/bootstrap.bundle.min.js" ></script>
 <script src="../js/jquery-3.5.1.min.js"></script>
