@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php
 
 include_once 'conectar.php';
@@ -42,11 +43,7 @@ $conexion = null;  $sentencia_edit_est=null; $sentencia_edit_rep=null;
 
 echo json_encode("ACTUALIZACIÓN EXITOSA!!!");
 
-
-
-
-
-
 ?>
+<?php ob_end_flush();?>
 
 

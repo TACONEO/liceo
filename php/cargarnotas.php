@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php
     session_start();
     include_once 'conectar.php';
@@ -171,6 +172,5 @@
   }
 
    
-    
-
 ?>
+<?php ob_end_flush();?>

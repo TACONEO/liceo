@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php
 
 include_once 'conectar.php';
@@ -27,14 +28,5 @@ $cedula = $_POST["cedula"]; $apellidos = strtoupper($_POST["apellidos"]);
 
             echo json_encode("ACTUALIZACIÓN EXITOSA!!!");
 
-
-
-
-
-
-
-
-
-
-
 ?>
+<?php ob_end_flush();?>

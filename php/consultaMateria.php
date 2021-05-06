@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <script > 
 
 
@@ -47,11 +48,8 @@ else{
     header( "refresh:0.5; url=../index.php" );
 }
 
-
-
-
-
 ?>
+<?php ob_end_flush();?>
 
 
 <!DOCTYPE html>

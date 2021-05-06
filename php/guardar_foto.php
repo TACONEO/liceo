@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php
 /*
     Tomar una fotografía y guardarla en un archivo
@@ -33,12 +34,5 @@ $nombreImagenGuardada = $ruta . $cedula . ".png";
 file_put_contents($nombreImagenGuardada, $imagenDecodificada);
 echo json_encode($cedula);
 
-
-
- 
-
-
-
-
-
 ?>
+<?php ob_end_flush();?>

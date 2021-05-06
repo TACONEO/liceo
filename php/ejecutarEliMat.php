@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php
 
 session_start();
@@ -46,3 +47,4 @@ if(isset($_SESSION["admin"]) || isset($_SESSION["DOCENTE-DE"]) || isset($_SESSIO
 
 
 ?>
+<?php ob_end_flush();?>

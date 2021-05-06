@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php
         session_start();
 
@@ -12,7 +13,5 @@
 
         }
 
-
-
-
 ?>
+<?php ob_end_flush();?>

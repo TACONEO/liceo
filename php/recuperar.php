@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <script > 
 
 
@@ -7,7 +8,7 @@ if (window.history.replaceState) { // verificamos disponibilidad
 }
 
 </script>
-
+<?php ob_end_flush();?>
 
 
 

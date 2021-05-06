@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php
 
 
@@ -57,3 +58,4 @@ else
 
 
 ?>
+<?php ob_end_flush();?>

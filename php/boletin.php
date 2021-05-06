@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php
 
     include '../fpdf/fpdf.php';
@@ -133,7 +134,7 @@ if($resultado)
                                     $pagina->ln();
                                 
                                     $pagina->setfont('arial','',11);
-                                    $pagina->settextcolor(8,8,8,);
+                                    $pagina->settextcolor(8,8,8);
                                     $pagina->SetDrawColor(255,255,255);
                                     $pagina->Setfillcolor(220, 228, 228);
                                     $pagina->setlinewidth(1);
@@ -219,7 +220,7 @@ if($resultado)
 
        
             
-     echo json_encode($lapso);
+     echo ($lapso);
     
 
     
@@ -246,3 +247,4 @@ else{
  
 
 ?>
+<?php ob_end_flush();?>

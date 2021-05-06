@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php
 
 
@@ -26,6 +27,25 @@
             $consulta_F = "SELECT * FROM $tabla WHERE $parametro = ? AND $parametro2 = ?";
             $sentencia_F =  $conexion->prepare($consulta_F);
             $sentencia_F->execute(array($comparar,$comparar2));
+            $respuesta_F = $sentencia_F->fetch();
+
+            return $respuesta_F;
+
+           
+               /* if($respuesta_F){
+                    return true;
+                }else{
+                    return false;
+                }*/
+
+        }
+
+        function consultar33($tabla, $parametro, $parametro2, $parametro3, $comparar, $comparar2,$comparar3, $conexion){
+
+            
+            $consulta_F = "SELECT * FROM $tabla WHERE $parametro = ? AND $parametro2 = ? AND $parametro3=?";
+            $sentencia_F =  $conexion->prepare($consulta_F);
+            $sentencia_F->execute(array($comparar,$comparar2,$comparar3));
             $respuesta_F = $sentencia_F->fetch();
 
             return $respuesta_F;
@@ -71,7 +91,5 @@
 
             return $reultados2;
         }
-
-       
-
 ?>
+<?php ob_end_flush();?>

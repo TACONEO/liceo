@@ -89,7 +89,7 @@ formulario.addEventListener("submit", function(e){
     
     if(datos.get("grado") != "0" && datos.get("seccion") != "0" && datos.get("periodo") != "0")
     {
-        fetch("boletin.php", {method:"POST", body:datos})
+       /* fetch("boletin.php", {method:"POST", body:datos})
         .then(respuesta => respuesta.json())
         .then(data=>{
             
@@ -112,18 +112,39 @@ formulario.addEventListener("submit", function(e){
             descargar.addEventListener('submit', function(e){
 
                 location.reload();
-            })
-
-           
+            })*/
 
 
-            
-
-
+            $.ajax({                        
+                type: "POST",                 
+                url: 'boletin.php',                    
+                data: $('#boletin').serialize(),
+                success: function(data)            
+                {
+                                        
+                    
+                    if(data=="Lapso1" || data=="Lapso2" || data=="Lapso3")
+                    {
+                        alert("Boletines Se Generaron Satisfactoriamente!!!")
+                    }
+                    formulario.reset();
+        
+                   formulario.classList.toggle("d-none");
+        
+                    var descargar = document.querySelector("#boletin2")
+        
+                    descargar.classList.toggle("d-none");
+                  
+                    descargar.grado_seccion.value = grado_seccion;
+                    descargar.periodo2.value = periodos;
+                    descargar.lapso.value = data;
+        
+                   
              
-              
-               
-        })
+
+                }
+
+            });
 
            
         

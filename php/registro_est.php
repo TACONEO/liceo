@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <script > 
 
 
@@ -102,9 +103,8 @@ if(isset($_SESSION["admin"]) or isset($_SESSION["DOCENTE-DE"]) or isset($_SESSIO
 
        
     }
-
 ?>
-
+<?php ob_end_flush();?>
 
 <!DOCTYPE html>
 <html lang="en">

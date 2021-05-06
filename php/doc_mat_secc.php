@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <script > 
 
         if (window.history.replaceState) { // verificamos disponibilidad
@@ -163,12 +164,8 @@ else{
   header( "refresh:0.2; url=../index.php" );
 }
 
-
-
-
-
 ?>
-
+<?php ob_end_flush();?>
 
 
 <!DOCTYPE html>

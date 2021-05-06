@@ -1,8 +1,6 @@
-<?php
-ob_start();
-?>
-<?php
+<?php ob_start();?>
 
+<?php
 
 $grado = $_POST["grado_seccion"]; $periodo = $_POST["periodo2"]; $lapso = $_POST["lapso"];
 
@@ -54,7 +52,7 @@ $zip = new ZipArchive();
   
 
  
- ?>
- <?php
+?>
+<?php
 ob_end_flush();
 ?>

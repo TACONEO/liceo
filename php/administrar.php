@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php
 
     session_start();
@@ -32,6 +33,8 @@
 
 
 ?>
+<?php ob_end_flush();?>
+
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -218,6 +221,11 @@ width: 60px; height: 60px;  left:45%;
         <div class="col-md-3  text-center p-3">
 
             <a href="eliminarMateria.php" class="btn btn-outline-primary p-3 fs-5 fw-bold">Eliminar Asignatura</a>
+        </div>
+
+        <div class="col-md-3  text-center p-3">
+
+            <a href="editarNota.php" class="btn btn-outline-primary p-3 fs-5 fw-bold">Editar Nota</a>
         </div>
         
        

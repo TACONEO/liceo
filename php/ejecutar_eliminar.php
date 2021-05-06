@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <?php
 
 
@@ -32,10 +33,5 @@ include_once 'conectar.php';
         echo json_encode("NO REGISTRAD@");
     }
 
-   
-
-
-
-
-
 ?>
+<?php ob_end_flush();?>

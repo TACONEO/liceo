@@ -1,3 +1,4 @@
+<?php ob_start();?>
 <script > 
 
 
@@ -25,11 +26,8 @@ else{
 }
 
 
-
-
-
 ?>
-
+<?php ob_end_flush();?>
 
 <!DOCTYPE html>
 <html lang="en">
